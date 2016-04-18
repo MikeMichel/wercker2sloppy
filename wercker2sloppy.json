@@ -1,0 +1,49 @@
+{
+    "project": "todo",
+    "services": [
+        {
+            "id": "frontend",
+            "apps": [
+                {
+                    "id": "node",
+                    "domain": {
+                        "type": "HTTP",
+                        "uri": "$URI"
+                    },
+                    "mem": 512,
+                    "image": "$IMAGE",
+                    "instances": 1,
+                    "port_mappings": [
+                        {
+                            "container_port": 5000
+                        }
+                    ],
+                    "env": {
+                        "MONGODB_URI": "mongodb://mongodb.backend.todo/todo"
+                    },
+                    "dependencies": [
+                        "../../backend/mongodb"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "backend",
+            "apps": [
+                {
+                    "id": "mongodb",
+                    "mem": 512,
+                    "image": "mongo",
+                    "cmd": "mongod --smallfiles --oplogSize 128",
+                    "instances": 1,
+                    "volumes": [
+                        {
+                            "container_path": "/data/db",
+                            "size": "8GB"
+                }
+            ]
+                    }
+            ]
+        }
+    ]
+}
