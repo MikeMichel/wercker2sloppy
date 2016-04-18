@@ -31,5 +31,5 @@ deploy:
     - script:
         name: deploy to sloppy
         code: |
-          curl -H "Content-Type: application/json" -H "Authorization: Bearer $SLOPPYIO_TOKEN" -X PATCH -d '{"image": "mikemichel/wercker2sloppy:'$WERCKER_GIT_COMMIT'"}'  https://api.sloppy.io/v1/apps/todo/services/frontend/apps/node
+          curl -H "Content-Type: application/json" -H "Authorization: Bearer $SLOPPYIO_TOKEN" -X PATCH -d '{"image": "'$REPOSITORY':'$WERCKER_GIT_COMMIT'"}'  https://api.sloppy.io/v1/apps/todo/services/frontend/apps/node
 
