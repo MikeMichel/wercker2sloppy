@@ -9,4 +9,3 @@ Example how to use [wercker](http://wercker.com) for a complete CI/CD workflow. 
 
 
 The example app is based on [MVC AngularJS ToDo List](http://todomvc.com/examples/angularjs/#/) and some changes from  https://twitter.com/ishuah_
-
