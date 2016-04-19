@@ -3,7 +3,7 @@ services:
 
   node:
     build: .
-    image: mikemichel/wercker2sloppy
+    image: "${TODO_IMAGE}"
     links:
       - mongo
     ports:

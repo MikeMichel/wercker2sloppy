@@ -22,7 +22,7 @@ deploy:
         username: $DOCKERHUB_USERNAME
         #password: $QUAY_PASSWORD
         password: $DOCKERHUB_PASSWORD
-        ports: "5000"
+        ports: "8080"
         #repository: quay.io/mikemichel/wercker2sloppy
         repository: $REPOSITORY
         #registry: https://quay.io
